@@ -14,3 +14,58 @@
 @import url('./header.css');
 @import url('./badges.css');
 @import url('./back-link.css');
+
+ul.gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 40px 0 0;
+}
+
+/* Gallery styles */
+/* Styles for Tablet devices */
+@media only screen and (min-width: 768px) {
+  ul.gallery {
+    grid-template-columns: repeat(2, 360px);
+  }
+}
+
+/* Styles for Desktop devices */
+@media only screen and (min-width: 1200px) {
+  ul.gallery {
+    grid-template-columns: repeat(3, 360px);
+  }
+}
+
+/* Form styles */
+.feedback-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.feedback-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.feedback-form input,
+.feedback-form textarea {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.feedback-form button {
+  padding: 8px 16px;
+  background-color: #00a903;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
